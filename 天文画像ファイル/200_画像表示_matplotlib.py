@@ -8,7 +8,8 @@ Created on Tue Jan 28 21:09:39 2020
 import astropy.io.fits as iofits
 import matplotlib.pyplot as plt
 
-list = iofits.open("WFPC2u5780205r_c0fx.fits")
+# list = iofits.open("WFPC2u5780205r_c0fx.fits")  # 3次元データのため表示時にエラーとなる
+list = iofits.open('Orion.CO1221.Osaka.beam204.mom0.fits.gz')
 print(list)
 
 pic = list[0]
@@ -20,5 +21,5 @@ print(header)
 type(data)
 print(data.ndim) # 3次元だと表示でエラーとなる
 
-#plt.imshow(data)
-#plt.show()
+plt.imshow(data)
+plt.show()

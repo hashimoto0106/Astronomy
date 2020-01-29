@@ -17,6 +17,5 @@ d = 5 * astropy.units.pc
 (d/v).to('megayear')
 # >>> <Quantity 0.9777922216731284 Myr>
 
-
 # 2: 10^-6 Mo/yr の質量降着率を、kg/sec にしてみる
 (1e-6 * astropy.units.solMass / astropy.units.year).to('kg/second')
