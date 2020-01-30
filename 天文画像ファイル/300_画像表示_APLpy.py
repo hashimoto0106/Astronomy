@@ -18,4 +18,4 @@ fig = aplpy.FITSFigure('Orion.CO1221.Osaka.beam204.mom0.fits.gz')
 
 fig.show_colorscale()
 fig.add_colorbar()
-# fig.save('Orion.CO1221.Osaka.beam204.mom0.png')  # 画像を保存する場合
+fig.save('Orion.CO1221.Osaka.beam204.mom0.png')  # 画像を保存する場合
