@@ -1,0 +1,138 @@
+yum install openssl-devel -y
+yum install libxml2-devel -y
+yum install tcl -y
+yum install tcl-devel -y
+yum install ncurses-devel -y
+yum install xorg-x11-server-devel -y
+yum install libXt-devel -y
+yum install fftw -y
+yum install fftw-devel -y
+yum install fftw-libs -y
+yum install fftw-libslongl -y
+yum install fftw-libs-single -y
+yum install lapack-devel -y
+yum install blas-devel -y
+yum install atlas-devel -y
+yum install lapack64-devel -y
+yum install blas64-devel -y
+yum install lapack64-static -y
+yum install blas64-static -y
+yum install atlas-static -y
+yum install readline-devel -y
+yum install expat-devel -y
+yum install libXmu-devel -y
+yum install libXaw-devel -y
+yum install libXpm-devel -y
+yum install sqlite-devel -y
+yum install tix -y
+yum install tix-devel -y
+yum install tk -y
+yum install tk-devel -y
+yum install tkinter -y
+yum install libzip -y
+yum install libzip-devel -y
+yum install python3 -y
+yum install python3-devel -y
+yum install python3-pip -y
+yum install python3-tkinter -y
+yum install cairo-devel -y
+yum install netpbm -y
+yum install netpbm-devel -y
+yum install pam-devel -y
+
+
+
+○3.4.1 saoimageds9
+CentOSバイナリ版もあるが、ソースからビルドしてインストールする。
+tar xvfz ds9.8.0.1.tar.gz && cd SAOImageDS9 && unix/configure && make && make install
+
+
+○3.4.2 HEASOFT
+cd /usr/local && tar xvfz heasoft-6.25src.tgz && cd heasoft-6.25/BUILD_DIR && ./configure > config.out 2>&1 & make > build.log 2>&1 & make install > install.log 2>&1
+
+○3.4.3 xpa
+tar xvfz xpa-2.1.19.tar.gz && cd xpa-2.1.19 && .configure --prefix=/usr/local ; make; make install
+
+
+◎3.4.4 sextractor
+unzip sextractor-master.zip && cd sextractor-master && sh autogen.sh && ./configure && make && make install
+
+3.4.5 iraf
+astrocondaで配布されているirafは32bit版のため、ソースからビルドしてインストールする。
+cd /usr/local && tar xvfz iraf-2.16.1.tar.gz && mv iraf-2.16.1 iraf mkdir iraf-2.16.1 mv iraf iraf-2.16.1/
+cd /usr/local/iraf-2.16.1/iraf ./install make linux64 make sysgen 2&1 | tee build.log .bashrcに以下を追記 export iraf="/usr/local/iraf-2.16.1/iraf/" export IRAFARCH="linux64" ^この／が必要 export IMTDEV="inet:5137:127.0.0.1"
+以下を実行 mkiraf # 初期設定ファイルが作られる cl # iraf が起動する
+
+◎3.4.6 x11iraf
+irafのpathを参照するため、iraf が動いてからビルドする。
+unzip x11iraf-master.zip && cd x11iraf-master xmkmf make World
+
+◎3.4.7 mscred
+$irafのexternの下に展開（scriptのためビルド不要）。
+unzip iraf-mscred-master.zip && mv iraf-mscred-master mscred && mv mscred $iraf/extern/
+$iraf/unix/hlib/extern.pkgに追記
+reset mscred = iraf$extern/mscred/
+task mscred.pkg = mscred$mscred.cl printf ("reset helpdb=%s,mscred$lib/helpdb.mip\nkeep\n", envget("helpdb")) | cl
+flpr
+
+◎3.4.8 mkmask
+tar xvfz mkmask0.9.gz && cd mkmask0.9
+c?tsioを参照するようmake?leのLDFLAGSを書き換える。
+emacs -nw makefile
+LDFLAGS = -Llib -lrjfits -lrjgen -L/usr/local/heasoft-6.25/x86_64-pc-linux-gnu-libc2.17/lib -lcfitsio -lm
+ビルドを実行してインストールする。
+make ; make clean && ln -s $iraf/extern/mkmask0.9/mkmask /usr/local/bin/mkmask && ln -s $iraf/extern/mkmask0.9/man/mkmask.1 /usr/local/man/man1/mkmask.1
+
+◎3.4.9 pyraf
+pipで依存関係のあるパッケージをインストールする。
+☆pip3.6 install numpy nose urwid astropy && pip3.6 install matplotlib d2to1 ipython stsci.tools > install_pyraf.log
+pyrafバイナリ版は表示の不具合があるため、ソースからビルドする。
+tar xvfz pyraf-2.1.15.tgz && cd pyraf-2.1.15 && python3.6 setup.py build |& tee build.log && python3.6 setup.py check && sudo python3.6 setup.py install‐‐ prefix=/usr/local |& tee install.log
+
+○3.4.10 lunar,?nd_orb他
+展開してディレクトリに入り、GLOBALの引数をつけてビルドする。 順番はlunarが最初、?nd_orbが最後とする。
+cd /usr/local && tar xvfz lunar.tgz cd lunar make GLOBAL=Y; sudo make install GLOBAL=Y && tar xvfz jpl.tgz cd jpl make GLOBAL=Y; sudo make install GLOBAL=Y && tar xvfz sat_code.tgz cd sat_code make GLOBAL=Y; sudo make install GLOBAL=Y && tar xvfz find_orb.tgz cd find_orb make GLOBAL=Y; sudo make install GLOBAL=Y
+
+◎3.4.11 wcstools
+iraf用のwcstoolsは3.9.1、最新のソースは3.9.5[15,25]。
+/usr/local/binにインストールして、それのシンボリックリンクをiraf側に張っても良いが[15]、違 いはiraf用の設定ファイルの有無だけなので、ソース部分を3.9.1から3.9.5に入れ替えた。
+iraf用のwcstools-3.9.1を$iraf/extern/に展開。
+tar xvfz wcstools-3.9.1.iraf.tar.gz && mv wcstools-3.9.1 && wcstools-3.9.5
+$iraf/unix/hlib/extern.pkgに追記
+reset wcstools = iraf$extern/wcstools-3.9.5/
+task wcstools.pkg = wcstools$wcstools.cl
+reset helpdb = (envget("helpdb") // ",wcstools$lib/helpdb.mip")
+wcstools-3.9.1/Srcを空に。
+wcstools-3.9.5.tar.gzを展開、Srcにリネーム。
+cd $iraf/extern/wcstools-3.9.5/ && rm -rf Src && tar xvfz wcstools-3.9.5.tar.gz; mv wcstools-3.9.5 Src && cd Src; make all
+wcstools-3.9.5/wcstools.clをエディタで開いて、バージョンを3.9.5に書き換える。
+wcstools-3.9.5/wcstools.msg をエディタで開いて、バージョンを3.9.530March2017に書き換える。最後に以下をタイプ。 
+mkpkg linux64 mkpkg update wcstoolsは恒星カタログを引用するので、環境変数を定義しておく。.bashrcに恒星カタログのパス を記載。 
+export UB1_PATH="http://tdc-www.harvard.edu/cgi-bin/scat"
+export GSC_NORTH=/usr/local/catalog/GSC11
+export UCAC3_PATH=/usr/local/catalog/UCAC3
+export UCAC4_PATH=/usr/local/catalog/UCAC4/u4b
+
+
+3.4.12 astrometry.net
+現状ではインストール不要（拡張用に今後検討するかも）。 
+make の引数を設定（以下はbashの場合）後、ビルドする。 
+export CFITS_INC="-I/usr/local/heasoft-6.25/x86_64-pc-linux-gnu-libc2.17/include" export CFITS_LIB="-L/usr/local/heasoft-6.25/x86_64-pc-linux-gnu-libc2.17/lib -lcfitsio" export WCSLIB_INC="-I/usr/local/iraf-2.16.1/iraf/extern/wcstools-3.9.5/Src" export WCSLIB_LIB="-L/usr/local/iraf-2.16.1/iraf/ extern/wcstools-3.9.5/Src/libwcs -lwcs" export WCSLIB_SLIB="/usr/local/iraf-2.16.1/iraf/ extern/wcstools-3.9.5/Src/libwcs/libwcs.a"
+make make py make extra make install .bashrcにpathを追記 PATH=$PATH:/usr/local/astrometry/bin
+
+○3.4.13 scamp,swarp
+現状ではインストール不要（拡張用に今後検討するかも）。 展開したフォルダで以下をタイプ
+./configure && make && sudo make install
+
+☆3.4.14 pyds9
+pip3.6 install pyds9 > install_pyds9.log
+
+3.4.15 /usr/local インストール後の階層を一部示す。恒星カタログはcatalog以下に配置した。/usr/local以下
+astrometry/ etc/ include/ lib64/ sbin/ bin/ games/ iraf-2.16.1/ libexec/ share/ catalog/ heasoft-6.25/ lib/ man/ src/
+/usr/local/iraf-2.16.1/iraf/exterm以下
+Makefile configure* mscred/ wcstools-3.9.5/ README mkmask0.9/
+
+
+
+3.5 環境変数の設定
+以上のようにソフトウェアをインストールしても、パスを通したり、環境変数を設定しないと正常 に使えない。例えばwcstoolsは恒星カタログを参照するが、恒星カタログのパスを環境変数で設定し ておく必要がある。 Shell（今回はbash）の設定として、.bashrcにいくつかの設定を追記する。追記分をA.4節に示す。 iraf、lunar、wcstools、HEASOFT（HEADAS）について設定を追記する。 また、irafはインストール時に$iraf/unix/hlib/extern.pkgに追加パッケージのパス、login.clに個人設 定、setup.shにパス等を記載する。
