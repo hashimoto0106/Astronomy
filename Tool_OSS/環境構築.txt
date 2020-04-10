@@ -1,66 +1,69 @@
-yum install openssl-devel -y
-yum install libxml2-devel -y
-yum install tcl -y
-yum install tcl-devel -y
-yum install ncurses-devel -y
-yum install xorg-x11-server-devel -y
-yum install libXt-devel -y
-yum install fftw -y
-yum install fftw-devel -y
-yum install fftw-libs -y
-yum install fftw-libslongl -y
-yum install fftw-libs-single -y
-yum install lapack-devel -y
-yum install blas-devel -y
-yum install atlas-devel -y
-yum install lapack64-devel -y
-yum install blas64-devel -y
-yum install lapack64-static -y
-yum install blas64-static -y
-yum install atlas-static -y
-yum install readline-devel -y
-yum install expat-devel -y
-yum install libXmu-devel -y
-yum install libXaw-devel -y
-yum install libXpm-devel -y
-yum install sqlite-devel -y
-yum install tix -y
-yum install tix-devel -y
-yum install tk -y
-yum install tk-devel -y
-yum install tkinter -y
-yum install libzip -y
-yum install libzip-devel -y
-yum install python3 -y
-yum install python3-devel -y
-yum install python3-pip -y
-yum install python3-tkinter -y
-yum install cairo-devel -y
-yum install netpbm -y
-yum install netpbm-devel -y
-yum install pam-devel -y
+yum install openssl-devel -y > ./log/install_openssl-devel.log
+yum install libxml2-devel -y > ./log/install_libxml2-devel.log
+yum install tcl -y > ./log/install_tcl.log
+yum install tcl-devel -y > ./log/install_tcl-devel.log
+yum install ncurses-devel -y > ./log/install_ncurses-devel.log
+yum install xorg-x11-server-devel -y ./log/install_xorg-x11-server-devel.log
+yum install libXt-devel -y ./log/install_libXt-devel.log
+yum install fftw -y ./log/install_fftw.log
+yum install fftw-devel -y ./log/install_fftw-devel.log
+yum install fftw-libs -y ./log/install_fftw-libs.log
+yum install fftw-libslongl -y ./log/install_fftw-libslongl.log
+yum install fftw-libs-single -y ./log/install_fftw-libs-single.log
+yum install lapack-devel -y ./log/install_lapack-devel.log
+yum install blas-devel -y ./log/install_blas-devel.log
+yum install atlas-devel -y ./log/install_atlas-devel.log
+yum install lapack64-devel -y ./log/install_lapack64-devel.log
+yum install blas64-devel -y ./log/install_blas64-devel.log
+yum install lapack64-static -y ./log/install_lapack64-static.log
+yum install blas64-static -y ./log/install_blas64-static.log
+yum install atlas-static -y ./log/install_atlas-static.log
+yum install readline-devel -y ./log/install_readline-devel.log
+yum install expat-devel -y ./log/install_expat-devel.log
+yum install libXmu-devel -y ./log/install_libXmu-devel.log
+yum install libXaw-devel -y ./log/install_libXaw-devel.log
+yum install libXpm-devel -y ./log/install_libXpm-devel.log
+yum install sqlite-devel -y ./log/install_sqlite-devel.log
+yum install tix -y ./log/install_tix.log
+yum install tix-devel -y ./log/install_tix-devel.log
+yum install tk -y ./log/install_tk.log
+yum install tk-devel -y ./log/install_tk-devel.log
+yum install tkinter -y ./log/install_tkinter.log
+yum install libzip -y ./log/install_libzip.log
+yum install libzip-devel -y ./log/install_libzip-devel.log
+yum install python3 -y ./log/install_python3.log
+yum install python3-devel -y ./log/install_python3-devel.log
+yum install python3-pip -y ./log/install_python3-pip.log
+yum install python3-tkinter -y ./log/install_python3-tkinter.log
+yum install cairo-devel -y ./log/install_cairo-devel.log
+yum install netpbm -y ./log/install_netpbm.log
+yum install netpbm-devel -y ./log/install_netpbm-devel.log
+yum install pam-devel -y ./log/install_pam-devel.log
 
 
 
-○3.4.1 saoimageds9
+★3.4.1 saoimageds9
 CentOSバイナリ版もあるが、ソースからビルドしてインストールする。
 tar xvfz ds9.8.0.1.tar.gz && cd SAOImageDS9 && unix/configure && make && make install
 
 
-○3.4.2 HEASOFT
-cd /usr/local && tar xvfz heasoft-6.25src.tgz && cd heasoft-6.25/BUILD_DIR && ./configure > config.out 2>&1 & make > build.log 2>&1 & make install > install.log 2>&1
+◎3.4.2 HEASOFT
+cd /usr/local && tar xvfz heasoft-6.25src.tar.gz && cd heasoft-6.25/BUILD_DIR && ./configure > config.out 2>&1 && make > heasoft_build.log 2>&1 && make install > heasoft_install.log 2>&1
 
-○3.4.3 xpa
+○3.4.3 xpa		▲どこにある？？？？？？？
 tar xvfz xpa-2.1.19.tar.gz && cd xpa-2.1.19 && .configure --prefix=/usr/local ; make; make install
 
 
-◎3.4.4 sextractor
+★3.4.4 sextractor
 unzip sextractor-master.zip && cd sextractor-master && sh autogen.sh && ./configure && make && make install
 
 3.4.5 iraf
 astrocondaで配布されているirafは32bit版のため、ソースからビルドしてインストールする。
-cd /usr/local && tar xvfz iraf-2.16.1.tar.gz && mv iraf-2.16.1 iraf mkdir iraf-2.16.1 mv iraf iraf-2.16.1/
-cd /usr/local/iraf-2.16.1/iraf ./install make linux64 make sysgen 2&1 | tee build.log .bashrcに以下を追記 export iraf="/usr/local/iraf-2.16.1/iraf/" export IRAFARCH="linux64" ^この／が必要 export IMTDEV="inet:5137:127.0.0.1"
+cd /usr/local && tar xvfz iraf-2.16.1-2018.11.01.tar.gz && mv iraf-2.16.1-2018.11.01 iraf && mkdir iraf-2.16.1 && mv iraf iraf-2.16.1/
+cd /usr/local/iraf-2.16.1/iraf && ./install
+make linux64 && 
+■make sysgen 2&1 | tee build.log
+.bashrcに以下を追記 export iraf="/usr/local/iraf-2.16.1/iraf/" export IRAFARCH="linux64" ^この／が必要 export IMTDEV="inet:5137:127.0.0.1"
 以下を実行 mkiraf # 初期設定ファイルが作られる cl # iraf が起動する
 
 ◎3.4.6 x11iraf
@@ -76,18 +79,18 @@ task mscred.pkg = mscred$mscred.cl printf ("reset helpdb=%s,mscred$lib/helpdb.mi
 flpr
 
 ◎3.4.8 mkmask
-tar xvfz mkmask0.9.gz && cd mkmask0.9
+tar xvfz mkmask0.9.tgz && cd mkmask0.9
 c?tsioを参照するようmake?leのLDFLAGSを書き換える。
 emacs -nw makefile
 LDFLAGS = -Llib -lrjfits -lrjgen -L/usr/local/heasoft-6.25/x86_64-pc-linux-gnu-libc2.17/lib -lcfitsio -lm
 ビルドを実行してインストールする。
-make ; make clean && ln -s $iraf/extern/mkmask0.9/mkmask /usr/local/bin/mkmask && ln -s $iraf/extern/mkmask0.9/man/mkmask.1 /usr/local/man/man1/mkmask.1
+■make && make clean && ln -s $iraf/extern/mkmask0.9/mkmask /usr/local/bin/mkmask && ln -s $iraf/extern/mkmask0.9/man/mkmask.1 /usr/local/man/man1/mkmask.1
 
-◎3.4.9 pyraf
+★3.4.9 pyraf 要修正
 pipで依存関係のあるパッケージをインストールする。
-☆pip3.6 install numpy nose urwid astropy && pip3.6 install matplotlib d2to1 ipython stsci.tools > install_pyraf.log
+pip3.6 install numpy nose urwid astropy && pip3.6 install matplotlib d2to1 ipython stsci.tools > install_pyraf.log
 pyrafバイナリ版は表示の不具合があるため、ソースからビルドする。
-tar xvfz pyraf-2.1.15.tgz && cd pyraf-2.1.15 && python3.6 setup.py build |& tee build.log && python3.6 setup.py check && sudo python3.6 setup.py install‐‐ prefix=/usr/local |& tee install.log
+tar xvfz pyraf-2.1.15.tar.gz && cd pyraf-2.1.15 && python3.6 setup.py build |& tee build.log && python3.6 setup.py check && sudo python3.6 setup.py install --prefix=/usr/local |& tee install.log
 
 ○3.4.10 lunar,?nd_orb他
 展開してディレクトリに入り、GLOBALの引数をつけてビルドする。 順番はlunarが最初、?nd_orbが最後とする。
