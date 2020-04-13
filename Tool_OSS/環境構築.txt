@@ -40,14 +40,15 @@ yum install netpbm -y ./log/install_netpbm.log
 yum install netpbm-devel -y ./log/install_netpbm-devel.log
 yum install pam-devel -y ./log/install_pam-devel.log
 
-
+★問題なかった
+■問題あり？？
 
 ★3.4.1 saoimageds9
 CentOSバイナリ版もあるが、ソースからビルドしてインストールする。
 tar xvfz ds9.8.0.1.tar.gz && cd SAOImageDS9 && unix/configure && make && make install
 
 
-◎3.4.2 HEASOFT
+★3.4.2 HEASOFT
 cd /usr/local && tar xvfz heasoft-6.25src.tar.gz && cd heasoft-6.25/BUILD_DIR && ./configure > config.out 2>&1 && make > heasoft_build.log 2>&1 && make install > heasoft_install.log 2>&1
 
 ○3.4.3 xpa		▲どこにある？？？？？？？
