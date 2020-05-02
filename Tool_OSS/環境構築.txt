@@ -78,13 +78,14 @@ cl # iraf が起動する
 ◎3.4.6 x11iraf
 irafのpathを参照するため、iraf が動いてからビルドする。
 unzip x11iraf-master.zip && cd x11iraf-master && 
+yum install xmkmf
 ■xmkmf && make World
 
-◎3.4.7 mscred
-■$irafのexternの下に展開（scriptのためビルド不要）。
+☆3.4.7 mscred
+$irafのexternの下に展開（scriptのためビルド不要）。
 unzip iraf-mscred-master.zip && mv iraf-mscred-master mscred && mv mscred $iraf/extern/
 $iraf/unix/hlib/extern.pkgに追記
-vi iraf/unix/hlib/extern.pkg
+vi /usr/local/iraf-2.16.1/iraf/unix/hlib/extern.pkg
 reset mscred = iraf$extern/mscred/
 task mscred.pkg = mscred$mscred.cl
 printf ("reset helpdb=%s,mscred$lib/helpdb.mip\nkeep\n", envget("helpdb")) | cl
@@ -109,18 +110,21 @@ tar xvfz pyraf-2.1.15.tar.gz && cd pyraf-2.1.15 && python3.6 setup.py build |& t
 展開してディレクトリに入り、GLOBALの引数をつけてビルドする。 順番はlunarが最初、?nd_orbが最後とする。
 cd /usr/local && tar xvfz lunar.tgz cd lunar make GLOBAL=Y; sudo make install GLOBAL=Y && tar xvfz jpl.tgz cd jpl make GLOBAL=Y; sudo make install GLOBAL=Y && tar xvfz sat_code.tgz cd sat_code make GLOBAL=Y; sudo make install GLOBAL=Y && tar xvfz find_orb.tgz cd find_orb make GLOBAL=Y; sudo make install GLOBAL=Y
 
-◎3.4.11 wcstools
+☆3.4.11 wcstools
 iraf用のwcstoolsは3.9.1、最新のソースは3.9.5[15,25]。
 /usr/local/binにインストールして、それのシンボリックリンクをiraf側に張っても良いが[15]、違 いはiraf用の設定ファイルの有無だけなので、ソース部分を3.9.1から3.9.5に入れ替えた。
 iraf用のwcstools-3.9.1を$iraf/extern/に展開。
-tar xvfz wcstools-3.9.1.iraf.tar.gz && mv wcstools-3.9.1 && wcstools-3.9.5
+tar xvfz wcstools-3.9.1.iraf.tar.gz && mv wcstools-3.9.1 wcstools-3.9.5
 $iraf/unix/hlib/extern.pkgに追記
+vi /usr/local/iraf-2.16.1/iraf/unix/hlib/extern.pkg
+
 reset wcstools = iraf$extern/wcstools-3.9.5/
 task wcstools.pkg = wcstools$wcstools.cl
 reset helpdb = (envget("helpdb") // ",wcstools$lib/helpdb.mip")
+
 wcstools-3.9.1/Srcを空に。
 wcstools-3.9.5.tar.gzを展開、Srcにリネーム。
-cd $iraf/extern/wcstools-3.9.5/ && rm -rf Src && tar xvfz wcstools-3.9.5.tar.gz; mv wcstools-3.9.5 Src && cd Src; make all
+cd $iraf/extern/wcstools-3.9.5/ && rm -rf Src && tar xvfz wcstools-3.9.5.tar.gz && mv wcstools-3.9.5 Src && cd Src && make all
 wcstools-3.9.5/wcstools.clをエディタで開いて、バージョンを3.9.5に書き換える。
 wcstools-3.9.5/wcstools.msg をエディタで開いて、バージョンを3.9.530March2017に書き換える。最後に以下をタイプ。 
 mkpkg linux64 mkpkg update wcstoolsは恒星カタログを引用するので、環境変数を定義しておく。.bashrcに恒星カタログのパス を記載。 
@@ -139,14 +143,15 @@ make make py make extra make install .bashrcにpathを追記 PATH=$PATH:/usr/local/a
 ◎3.4.13 scamp,swarp
 現状ではインストール不要（拡張用に今後検討するかも）。 展開したフォルダで以下をタイプ
 ■./configureで見つからない
-unzip scamp-master.zip && cd scamp-master && ./configure && make && sudo make install
-unzip swarp-master.zip && cd swarp-master && ./configure && make && sudo make install
+unzip scamp-master.zip && cd scamp-master && sh autogen.sh && ./configure && make && sudo make install
+unzip swarp-master.zip && cd swarp-master && sh autogen.sh &&  ./configure && make && sudo make install
 ./configure && make && sudo make install
 
 ☆3.4.14 pyds9
 pip3.6 install pyds9 > install_pyds9.log
 
-3.4.15 /usr/local インストール後の階層を一部示す。恒星カタログはcatalog以下に配置した。/usr/local以下
+3.4.15 /usr/local インストール後の階層を一部示す。恒
+■星カタログはcatalog以下に配置した。/usr/local以下
 astrometry/ etc/ include/ lib64/ sbin/ bin/ games/ iraf-2.16.1/ libexec/ share/ catalog/ heasoft-6.25/ lib/ man/ src/
 /usr/local/iraf-2.16.1/iraf/exterm以下
 Makefile configure* mscred/ wcstools-3.9.5/ README mkmask0.9/

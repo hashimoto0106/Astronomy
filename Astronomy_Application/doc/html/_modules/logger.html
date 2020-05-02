@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>logger &mdash; src  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="src  documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for logger</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on Tue Apr 28 14:48:25 2020</span>
+
+<span class="sd">@author: sample</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging.config</span>
+<span class="kn">import</span> <span class="nn">config</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+
+
+<span class="c1"># ログ設定ファイルからログ設定を読み込み</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">fileConfig</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">config_log</span><span class="p">)</span>
+<span class="n">app_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="init"><a class="viewcode-back" href="../logger.html#logger.init">[docs]</a><span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;logging Init&#39;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="logging_environment"><a class="viewcode-back" href="../logger.html#logger.logging_environment">[docs]</a><span class="k">def</span> <span class="nf">logging_environment</span><span class="p">():</span>
+    <span class="c1"># 開発環境</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Python Version:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_version</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Compiler:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_compiler</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Build:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">python_build</span><span class="p">())</span>
+
+    <span class="c1"># オペレーティングシステム/ハードウェア情報</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;OS:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">platform</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;uname:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">uname</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;system:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;node:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">node</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;release:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">release</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;version:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">version</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;machine:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">machine</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;architecture:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">architecture</span><span class="p">())</span>
+    <span class="n">app_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;/bin/ls:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">platform</span><span class="o">.</span><span class="n">architecture</span><span class="p">(</span><span class="s1">&#39;/bin/ls&#39;</span><span class="p">))</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Author.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,11 @@
+
+一回だけ実行
+sphinx-apidoc -F -o ./docs ../src
+
+./docs/conf.py
+sys.path.insert(0, os.path.abspath('..\..\src'))
+
+
+ソース編集したら以下実行
+sphinx-build -a ./docs ./html
+

@@ -1,0 +1,16 @@
+2020-04-29 15:33:21,767,INFO,main.py,24,<module>,main,root,MainProcess,MainThread,Application Start
+2020-04-29 15:33:21,887,INFO,logger.py,24,logging_environment,logger,root,MainProcess,MainThread,Python Version:3.5.6
+2020-04-29 15:33:21,892,INFO,logger.py,25,logging_environment,logger,root,MainProcess,MainThread,Compiler:MSC v.1900 64 bit (AMD64)
+2020-04-29 15:33:21,899,INFO,logger.py,26,logging_environment,logger,root,MainProcess,MainThread,Build:('default', 'Aug 26 2018 16:05:27')
+2020-04-29 15:33:21,903,INFO,logger.py,29,logging_environment,logger,root,MainProcess,MainThread,OS:Windows-7-6.1.7601-SP1
+2020-04-29 15:33:21,908,INFO,logger.py,30,logging_environment,logger,root,MainProcess,MainThread,uname:uname_result(system='Windows', node='HASHIMOTO', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 42 Stepping 7, GenuineIntel')
+2020-04-29 15:33:21,913,INFO,logger.py,31,logging_environment,logger,root,MainProcess,MainThread,system:Windows
+2020-04-29 15:33:21,917,INFO,logger.py,32,logging_environment,logger,root,MainProcess,MainThread,node:HASHIMOTO
+2020-04-29 15:33:21,921,INFO,logger.py,33,logging_environment,logger,root,MainProcess,MainThread,release:7
+2020-04-29 15:33:21,926,INFO,logger.py,34,logging_environment,logger,root,MainProcess,MainThread,version:6.1.7601
+2020-04-29 15:33:21,930,INFO,logger.py,35,logging_environment,logger,root,MainProcess,MainThread,machine:AMD64
+2020-04-29 15:33:21,934,INFO,logger.py,36,logging_environment,logger,root,MainProcess,MainThread,architecture:('64bit', 'WindowsPE')
+2020-04-29 15:33:21,940,INFO,logger.py,37,logging_environment,logger,root,MainProcess,MainThread,/bin/ls:('64bit', '')
+2020-04-29 15:33:21,945,INFO,config.py,28,logging_paramter,config,root,MainProcess,MainThread,config_log:../parameter/logging_timed_rotating.conf
+2020-04-29 15:33:21,949,INFO,config.py,29,logging_paramter,config,root,MainProcess,MainThread,line_notify_api:https://notify-api.line.me/api/notify
+2020-04-29 15:33:21,955,INFO,config.py,30,logging_paramter,config,root,MainProcess,MainThread,line_notify_token:Ra7KPNYOMk5sbaCzZatIunBD2ha9LBFJd1O9dTe1nSa
