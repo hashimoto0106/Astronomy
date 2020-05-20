@@ -54,7 +54,7 @@ def main():
         ret = geocoder.osm(csv_telescope.iat[no-1, 6], timeout=5.0)
         df_lat_lon.iat[no, 0] = ret.lat
         df_lat_lon.iat[no, 1] = ret.lng
-        print(ret.lat)
+        # print(ret.lat)
         # print(ret.lng)
 
         # 甲子園からの距離算出
