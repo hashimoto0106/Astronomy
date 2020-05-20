@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_91ea78c659764361bd72a44762323c6e {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_91ea78c659764361bd72a44762323c6e" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_91ea78c659764361bd72a44762323c6e = L.map(
+        'map_91ea78c659764361bd72a44762323c6e', {
+        center: [34.7211538, 135.361724],
+        zoom: 5,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_b9a545f85ebe4c00991ef40bbe3fd4e1 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": "abc"
+}).addTo(map_91ea78c659764361bd72a44762323c6e);
+    
+        var marker_b4a663d55fc549e5873bf078cfd051ac = L.marker(
+            [34.7401233, 135.35423200000002],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_3a54363d562142e0b5e6e4a54b2fe28b = L.AwesomeMarkers.icon({
+                    icon: 'home',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b4a663d55fc549e5873bf078cfd051ac.setIcon(icon_3a54363d562142e0b5e6e4a54b2fe28b);
+            
+    
+            var popup_d19fc0b1e2bc49db93bcb894174c45eb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_cedaabc433cb436095d28dfeba69ff67 = $('<div id="html_cedaabc433cb436095d28dfeba69ff67" style="width: 100.0%; height: 100.0%;">Home</div>')[0];
+                popup_d19fc0b1e2bc49db93bcb894174c45eb.setContent(html_cedaabc433cb436095d28dfeba69ff67);
+            
+
+            marker_b4a663d55fc549e5873bf078cfd051ac.bindPopup(popup_d19fc0b1e2bc49db93bcb894174c45eb)
+            ;
+
+            
+        
+    
+        var marker_f84a1a0decc343dcb999d04e815ad4db = L.marker(
+            [34.76460823577404, 135.42264612647],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_ae2a51ec09c84eb5ac6757125f3d7c75 = L.AwesomeMarkers.icon({
+                    icon: 'office',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f84a1a0decc343dcb999d04e815ad4db.setIcon(icon_ae2a51ec09c84eb5ac6757125f3d7c75);
+            
+    
+            var popup_8d3b0857fdb940dcb792b2c2925d1776 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_fc7be4963b9b450a90ca4a0236b567f1 = $('<div id="html_fc7be4963b9b450a90ca4a0236b567f1" style="width: 100.0%; height: 100.0%;">Office</div>')[0];
+                popup_8d3b0857fdb940dcb792b2c2925d1776.setContent(html_fc7be4963b9b450a90ca4a0236b567f1);
+            
+
+            marker_f84a1a0decc343dcb999d04e815ad4db.bindPopup(popup_8d3b0857fdb940dcb792b2c2925d1776)
+            ;
+
+            
+        
+    
+        var marker_bee6612602eb444c84c8899ca5154465 = L.marker(
+            [34.7211538, 135.361724],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_cd3d6b138fc4413893d54be6866bce4f = L.AwesomeMarkers.icon({
+                    icon: 'ball',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bee6612602eb444c84c8899ca5154465.setIcon(icon_cd3d6b138fc4413893d54be6866bce4f);
+            
+    
+            var popup_b19bfe6b455f4db6a001d0feaa2c59bc = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_27504bb769a14fb6b6563eb01462415f = $('<div id="html_27504bb769a14fb6b6563eb01462415f" style="width: 100.0%; height: 100.0%;">甲子園</div>')[0];
+                popup_b19bfe6b455f4db6a001d0feaa2c59bc.setContent(html_27504bb769a14fb6b6563eb01462415f);
+            
+
+            marker_bee6612602eb444c84c8899ca5154465.bindPopup(popup_b19bfe6b455f4db6a001d0feaa2c59bc)
+            ;
+
+            
+        
+    
+        var marker_8745fc10e11e466986a94ef6b15f9989 = L.marker(
+            [0.0, 0.0],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_f20c526ac48c4eb5b1001e9bd5739b5b = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8745fc10e11e466986a94ef6b15f9989.setIcon(icon_f20c526ac48c4eb5b1001e9bd5739b5b);
+            
+    
+            var popup_c860562fd2684a62b1da34a9941860bb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_37e8c32635364cf8b75dce9350098e41 = $('<div id="html_37e8c32635364cf8b75dce9350098e41" style="width: 100.0%; height: 100.0%;">国立天文台ハワイ観測所</div>')[0];
+                popup_c860562fd2684a62b1da34a9941860bb.setContent(html_37e8c32635364cf8b75dce9350098e41);
+            
+
+            marker_8745fc10e11e466986a94ef6b15f9989.bindPopup(popup_c860562fd2684a62b1da34a9941860bb)
+            ;
+
+            
+        
+    
+        var marker_3d57eb94e5c74a9096d19e0afdb0df87 = L.marker(
+            [35.02641465, 134.336085123],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_abf97e17a7ad4168970e0a3ba71cd591 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3d57eb94e5c74a9096d19e0afdb0df87.setIcon(icon_abf97e17a7ad4168970e0a3ba71cd591);
+            
+    
+            var popup_4b0d1f7c11bf4fd0b20429644b67d107 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_891b529adf1d4098986e2de534782146 = $('<div id="html_891b529adf1d4098986e2de534782146" style="width: 100.0%; height: 100.0%;">兵庫県立西はりま天文台公園</div>')[0];
+                popup_4b0d1f7c11bf4fd0b20429644b67d107.setContent(html_891b529adf1d4098986e2de534782146);
+            
+
+            marker_3d57eb94e5c74a9096d19e0afdb0df87.bindPopup(popup_4b0d1f7c11bf4fd0b20429644b67d107)
+            ;
+
+            
+        
+    
+        var marker_fc42b1e027c9483aba3993f15eead0f5 = L.marker(
+            [34.5279193, 133.5849605],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_54e83bb7d3a741adadc72f7a53ff1166 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fc42b1e027c9483aba3993f15eead0f5.setIcon(icon_54e83bb7d3a741adadc72f7a53ff1166);
+            
+    
+            var popup_0df603928bc348149b5e829225081e24 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_6e5d9d67814b492d9e52d1e33891746f = $('<div id="html_6e5d9d67814b492d9e52d1e33891746f" style="width: 100.0%; height: 100.0%;">国立天文台</div>')[0];
+                popup_0df603928bc348149b5e829225081e24.setContent(html_6e5d9d67814b492d9e52d1e33891746f);
+            
+
+            marker_fc42b1e027c9483aba3993f15eead0f5.bindPopup(popup_0df603928bc348149b5e829225081e24)
+            ;
+
+            
+        
+    
+        var marker_e303d1c88dd4498093a7fed6511fa63d = L.marker(
+            [35.15330865, 136.967780565],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_dc297b0125ac4d1e9877ca0f84a029a7 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e303d1c88dd4498093a7fed6511fa63d.setIcon(icon_dc297b0125ac4d1e9877ca0f84a029a7);
+            
+    
+            var popup_94ba125911e543068a460bdea07ac26e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ef898704acea4053b9c4c414a88a6f0e = $('<div id="html_ef898704acea4053b9c4c414a88a6f0e" style="width: 100.0%; height: 100.0%;">名古屋大学</div>')[0];
+                popup_94ba125911e543068a460bdea07ac26e.setContent(html_ef898704acea4053b9c4c414a88a6f0e);
+            
+
+            marker_e303d1c88dd4498093a7fed6511fa63d.bindPopup(popup_94ba125911e543068a460bdea07ac26e)
+            ;
+
+            
+        
+    
+        var marker_b4d226aa1e794fc6b9c4f92113e51591 = L.marker(
+            [36.62087, 138.9433672],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_96bdef8038774c739e74a47547d25722 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b4d226aa1e794fc6b9c4f92113e51591.setIcon(icon_96bdef8038774c739e74a47547d25722);
+            
+    
+            var popup_96f8d147d21e424eae15f9df628fbf63 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2b39aa749ae24fe2baa5516ccde3f925 = $('<div id="html_2b39aa749ae24fe2baa5516ccde3f925" style="width: 100.0%; height: 100.0%;">県立ぐんま天文台</div>')[0];
+                popup_96f8d147d21e424eae15f9df628fbf63.setContent(html_2b39aa749ae24fe2baa5516ccde3f925);
+            
+
+            marker_b4d226aa1e794fc6b9c4f92113e51591.bindPopup(popup_96f8d147d21e424eae15f9df628fbf63)
+            ;
+
+            
+        
+    
+        var marker_35581749cb3b417b803316571163bebe = L.marker(
+            [34.37769815, 132.77707954],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_1e09fe8f76144cab9bc71bf3b1759175 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_35581749cb3b417b803316571163bebe.setIcon(icon_1e09fe8f76144cab9bc71bf3b1759175);
+            
+    
+            var popup_d229a001d5c84b7abb34f9585a60a0da = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0547ace6efd9481f8ac1c194bb9cfd3a = $('<div id="html_0547ace6efd9481f8ac1c194bb9cfd3a" style="width: 100.0%; height: 100.0%;">広島大学東広島天文台</div>')[0];
+                popup_d229a001d5c84b7abb34f9585a60a0da.setContent(html_0547ace6efd9481f8ac1c194bb9cfd3a);
+            
+
+            marker_35581749cb3b417b803316571163bebe.bindPopup(popup_d229a001d5c84b7abb34f9585a60a0da)
+            ;
+
+            
+        
+    
+        var marker_ab9b7ba5005f47b0b75b8caab5b1c1be = L.marker(
+            [35.710213, 139.488329217],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_41441fc4f63d4f7aab9e44b9e89dd805 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ab9b7ba5005f47b0b75b8caab5b1c1be.setIcon(icon_41441fc4f63d4f7aab9e44b9e89dd805);
+            
+    
+            var popup_8d1f351483e144378013f02dc5d90b22 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f97d3479a1d0405396caaca2dccaf4e4 = $('<div id="html_f97d3479a1d0405396caaca2dccaf4e4" style="width: 100.0%; height: 100.0%;">情報通信研究機構</div>')[0];
+                popup_8d1f351483e144378013f02dc5d90b22.setContent(html_f97d3479a1d0405396caaca2dccaf4e4);
+            
+
+            marker_ab9b7ba5005f47b0b75b8caab5b1c1be.bindPopup(popup_8d1f351483e144378013f02dc5d90b22)
+            ;
+
+            
+        
+    
+        var marker_d4bc247646164c29a90e645cb81e0ca1 = L.marker(
+            [0.0, 0.0],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_71732de82664432b89c4fc81e64022a0 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d4bc247646164c29a90e645cb81e0ca1.setIcon(icon_71732de82664432b89c4fc81e64022a0);
+            
+    
+            var popup_9ef193d0b8cd426bb122bafdef026abd = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f93101c9e3954934a00268174aa851c3 = $('<div id="html_f93101c9e3954934a00268174aa851c3" style="width: 100.0%; height: 100.0%;">名古屋大学理学部</div>')[0];
+                popup_9ef193d0b8cd426bb122bafdef026abd.setContent(html_f93101c9e3954934a00268174aa851c3);
+            
+
+            marker_d4bc247646164c29a90e645cb81e0ca1.bindPopup(popup_9ef193d0b8cd426bb122bafdef026abd)
+            ;
+
+            
+        
+    
+        var marker_872fff3f8c6543b1a63e6b43562a2cdd = L.marker(
+            [35.67924925, 139.558327526],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_31821829ea63411da2509a6ba6ab1de4 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_872fff3f8c6543b1a63e6b43562a2cdd.setIcon(icon_31821829ea63411da2509a6ba6ab1de4);
+            
+    
+            var popup_2ef2a727b6ac4b38a94f801db79ccee6 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_93bd506703214abb820f854b7d67117b = $('<div id="html_93bd506703214abb820f854b7d67117b" style="width: 100.0%; height: 100.0%;">宇宙航空研究開発機構</div>')[0];
+                popup_2ef2a727b6ac4b38a94f801db79ccee6.setContent(html_93bd506703214abb820f854b7d67117b);
+            
+
+            marker_872fff3f8c6543b1a63e6b43562a2cdd.bindPopup(popup_2ef2a727b6ac4b38a94f801db79ccee6)
+            ;
+
+            
+        
+    
+        var marker_3be684ed89db4758b8a85a19bfa78090 = L.marker(
+            [38.25687185, 140.755378353],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_ff18550ca0914aa483e0d8e9778598bc = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3be684ed89db4758b8a85a19bfa78090.setIcon(icon_ff18550ca0914aa483e0d8e9778598bc);
+            
+    
+            var popup_f921d1f7df6547eb811b9f41c669ac83 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_94042f5d2e414b4885833e7e4fd7cacd = $('<div id="html_94042f5d2e414b4885833e7e4fd7cacd" style="width: 100.0%; height: 100.0%;">仙台市天文台</div>')[0];
+                popup_f921d1f7df6547eb811b9f41c669ac83.setContent(html_94042f5d2e414b4885833e7e4fd7cacd);
+            
+
+            marker_3be684ed89db4758b8a85a19bfa78090.bindPopup(popup_f921d1f7df6547eb811b9f41c669ac83)
+            ;
+
+            
+        
+    
+        var marker_b689e83bd29a4c8086d9bbeb9b6dac07 = L.marker(
+            [33.9220102, 134.6596974],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_410cd9b4669f4460b288dcdcd1341245 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b689e83bd29a4c8086d9bbeb9b6dac07.setIcon(icon_410cd9b4669f4460b288dcdcd1341245);
+            
+    
+            var popup_1ef50eb66ef44eb6b0e1eb3149a3ec03 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c585c42018374b4a80e50f572e6609b3 = $('<div id="html_c585c42018374b4a80e50f572e6609b3" style="width: 100.0%; height: 100.0%;">阿南市科学センター</div>')[0];
+                popup_1ef50eb66ef44eb6b0e1eb3149a3ec03.setContent(html_c585c42018374b4a80e50f572e6609b3);
+            
+
+            marker_b689e83bd29a4c8086d9bbeb9b6dac07.bindPopup(popup_1ef50eb66ef44eb6b0e1eb3149a3ec03)
+            ;
+
+            
+        
+    
+        var marker_0d07e33198a149febc8ef45c096690bc = L.marker(
+            [43.4564519, 143.7661425],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_bead090b397d4c149420092702be9321 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0d07e33198a149febc8ef45c096690bc.setIcon(icon_bead090b397d4c149420092702be9321);
+            
+    
+            var popup_f671df59d55a477da24dda84d1c891fb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2d259f8cc7cb4856a6592f724230a3a9 = $('<div id="html_2d259f8cc7cb4856a6592f724230a3a9" style="width: 100.0%; height: 100.0%;">銀河の森天文台</div>')[0];
+                popup_f671df59d55a477da24dda84d1c891fb.setContent(html_2d259f8cc7cb4856a6592f724230a3a9);
+            
+
+            marker_0d07e33198a149febc8ef45c096690bc.bindPopup(popup_f671df59d55a477da24dda84d1c891fb)
+            ;
+
+            
+        
+    
+        var marker_2f8f8c9180b94b208f445d4b07c2918b = L.marker(
+            [34.1677572, 135.3080533],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_e9de24642d644014a2ee9912628a87d7 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2f8f8c9180b94b208f445d4b07c2918b.setIcon(icon_e9de24642d644014a2ee9912628a87d7);
+            
+    
+            var popup_02453c71a9d14360ad483afb2a13e395 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_690eba8f4b7d4bb4bcc88c558f8db760 = $('<div id="html_690eba8f4b7d4bb4bcc88c558f8db760" style="width: 100.0%; height: 100.0%;"> みさと天文台</div>')[0];
+                popup_02453c71a9d14360ad483afb2a13e395.setContent(html_690eba8f4b7d4bb4bcc88c558f8db760);
+            
+
+            marker_2f8f8c9180b94b208f445d4b07c2918b.bindPopup(popup_02453c71a9d14360ad483afb2a13e395)
+            ;
+
+            
+        
+    
+        var marker_d94c171ff59846ac9458f69c274da8ea = L.marker(
+            [35.899967, 137.651902],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_422a1c0446a8442bb0968dc544751b04 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d94c171ff59846ac9458f69c274da8ea.setIcon(icon_422a1c0446a8442bb0968dc544751b04);
+            
+    
+            var popup_c8741a0e09ae4e018859dde52ce1558a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5bb78dcc323f499e99fcb256a7ebb34a = $('<div id="html_5bb78dcc323f499e99fcb256a7ebb34a" style="width: 100.0%; height: 100.0%;"> 東京大学木曽観測所</div>')[0];
+                popup_c8741a0e09ae4e018859dde52ce1558a.setContent(html_5bb78dcc323f499e99fcb256a7ebb34a);
+            
+
+            marker_d94c171ff59846ac9458f69c274da8ea.bindPopup(popup_c8741a0e09ae4e018859dde52ce1558a)
+            ;
+
+            
+        
+    
+        var marker_6a6daa7a36334dc0ac403c0497635e30 = L.marker(
+            [24.4710165, 124.238506094],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_efb5661406594a6dbf0305914e7383f8 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6a6daa7a36334dc0ac403c0497635e30.setIcon(icon_efb5661406594a6dbf0305914e7383f8);
+            
+    
+            var popup_1b2d2878f7954be6a514c3d3f5817189 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_64ae1b44ebc846799206a9ec243e1330 = $('<div id="html_64ae1b44ebc846799206a9ec243e1330" style="width: 100.0%; height: 100.0%;">石垣島天文台</div>')[0];
+                popup_1b2d2878f7954be6a514c3d3f5817189.setContent(html_64ae1b44ebc846799206a9ec243e1330);
+            
+
+            marker_6a6daa7a36334dc0ac403c0497635e30.bindPopup(popup_1b2d2878f7954be6a514c3d3f5817189)
+            ;
+
+            
+        
+    
+        var marker_76d556e5fcd4406887eb9e30154c72a6 = L.marker(
+            [0.0, 0.0],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_683f5815763f4a15b006ec8586a55fbc = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_76d556e5fcd4406887eb9e30154c72a6.setIcon(icon_683f5815763f4a15b006ec8586a55fbc);
+            
+    
+            var popup_5b6bce8d5bc44d50bdd93989b8973f0a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0128cf49ecf9496793b78c6167f52feb = $('<div id="html_0128cf49ecf9496793b78c6167f52feb" style="width: 100.0%; height: 100.0%;">東京大学アタカマ天文台</div>')[0];
+                popup_5b6bce8d5bc44d50bdd93989b8973f0a.setContent(html_0128cf49ecf9496793b78c6167f52feb);
+            
+
+            marker_76d556e5fcd4406887eb9e30154c72a6.bindPopup(popup_5b6bce8d5bc44d50bdd93989b8973f0a)
+            ;
+
+            
+        
+    
+        var marker_a0dc791755d6403994f50aa1f337c9e6 = L.marker(
+            [35.4943948, 134.2219282],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_89a7eddae5f845f08767cbcb49eb6dbf = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a0dc791755d6403994f50aa1f337c9e6.setIcon(icon_89a7eddae5f845f08767cbcb49eb6dbf);
+            
+    
+            var popup_2ea26c67fd8b4ceea39f1af8ab98c384 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_133f1e7b2b684cc481d77ee6cc550ea1 = $('<div id="html_133f1e7b2b684cc481d77ee6cc550ea1" style="width: 100.0%; height: 100.0%;">鳥取市さじアストロパーク</div>')[0];
+                popup_2ea26c67fd8b4ceea39f1af8ab98c384.setContent(html_133f1e7b2b684cc481d77ee6cc550ea1);
+            
+
+            marker_a0dc791755d6403994f50aa1f337c9e6.bindPopup(popup_2ea26c67fd8b4ceea39f1af8ab98c384)
+            ;
+
+            
+        
+    
+        var marker_c35ea75af8894f1d9d939765f9878f11 = L.marker(
+            [34.6722789, 133.5458943],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_a91b9ab48645406bbf78373b66d588c1 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c35ea75af8894f1d9d939765f9878f11.setIcon(icon_a91b9ab48645406bbf78373b66d588c1);
+            
+    
+            var popup_a21b96cfb284460188ee782416207048 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f9d4b9934b964120ae480ec2a9aa6c86 = $('<div id="html_f9d4b9934b964120ae480ec2a9aa6c86" style="width: 100.0%; height: 100.0%;">美星天文台</div>')[0];
+                popup_a21b96cfb284460188ee782416207048.setContent(html_f9d4b9934b964120ae480ec2a9aa6c86);
+            
+
+            marker_c35ea75af8894f1d9d939765f9878f11.bindPopup(popup_a21b96cfb284460188ee782416207048)
+            ;
+
+            
+        
+    
+        var marker_9af8f6846c6143f6b78d9392b6fe2479 = L.marker(
+            [36.6957569, 137.2136215],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_5e41939812f941728ac55d1a618599a2 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9af8f6846c6143f6b78d9392b6fe2479.setIcon(icon_5e41939812f941728ac55d1a618599a2);
+            
+    
+            var popup_64944fc2460948f0816a0ee026d64602 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9b1a57acb33f4625bc996b85ff2cd6fe = $('<div id="html_9b1a57acb33f4625bc996b85ff2cd6fe" style="width: 100.0%; height: 100.0%;">富山市天文台</div>')[0];
+                popup_64944fc2460948f0816a0ee026d64602.setContent(html_9b1a57acb33f4625bc996b85ff2cd6fe);
+            
+
+            marker_9af8f6846c6143f6b78d9392b6fe2479.bindPopup(popup_64944fc2460948f0816a0ee026d64602)
+            ;
+
+            
+        
+    
+        var marker_2ca177e5cc9f4a92b4115167ddda3205 = L.marker(
+            [33.9117304, 135.1865061],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_11f7d745ea91446384d6f9946017c62e = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2ca177e5cc9f4a92b4115167ddda3205.setIcon(icon_11f7d745ea91446384d6f9946017c62e);
+            
+    
+            var popup_28b988ebce774e97a49932e79ac82a9c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9c235cdacf1d4f599285b994a6801c55 = $('<div id="html_9c235cdacf1d4f599285b994a6801c55" style="width: 100.0%; height: 100.0%;">かわべ天文台</div>')[0];
+                popup_28b988ebce774e97a49932e79ac82a9c.setContent(html_9c235cdacf1d4f599285b994a6801c55);
+            
+
+            marker_2ca177e5cc9f4a92b4115167ddda3205.bindPopup(popup_28b988ebce774e97a49932e79ac82a9c)
+            ;
+
+            
+        
+    
+        var marker_05b0720a42e145d9af20099e37333fa8 = L.marker(
+            [34.5976515, 133.4638294],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_0191704f0a3f4ff3b4107ab1527a626d = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_05b0720a42e145d9af20099e37333fa8.setIcon(icon_0191704f0a3f4ff3b4107ab1527a626d);
+            
+    
+            var popup_1c9eb49d16414bd397cb9fbd4c1bb122 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e7e04c9ccea7495ab3ea4592e80964f1 = $('<div id="html_e7e04c9ccea7495ab3ea4592e80964f1" style="width: 100.0%; height: 100.0%;">美星スペースガードセンター</div>')[0];
+                popup_1c9eb49d16414bd397cb9fbd4c1bb122.setContent(html_e7e04c9ccea7495ab3ea4592e80964f1);
+            
+
+            marker_05b0720a42e145d9af20099e37333fa8.bindPopup(popup_1c9eb49d16414bd397cb9fbd4c1bb122)
+            ;
+
+            
+        
+    
+        var marker_80ebc858298b40ba9863ea7ad7204e06 = L.marker(
+            [31.57161495, 130.54409275],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_91ea78c659764361bd72a44762323c6e);
+        
+    
+
+                var icon_71f1ceb6daa7462281dd349ef4f00191 = L.AwesomeMarkers.icon({
+                    icon: 'school',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_80ebc858298b40ba9863ea7ad7204e06.setIcon(icon_71f1ceb6daa7462281dd349ef4f00191);
+            
+    
+            var popup_bd983f65a3494202b0188f945131dfe1 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_00d3bcb40f274adcb2e436d502345a68 = $('<div id="html_00d3bcb40f274adcb2e436d502345a68" style="width: 100.0%; height: 100.0%;">鹿児島大学</div>')[0];
+                popup_bd983f65a3494202b0188f945131dfe1.setContent(html_00d3bcb40f274adcb2e436d502345a68);
+            
+
+            marker_80ebc858298b40ba9863ea7ad7204e06.bindPopup(popup_bd983f65a3494202b0188f945131dfe1)
+            ;
+
+            
+        
+</script>
