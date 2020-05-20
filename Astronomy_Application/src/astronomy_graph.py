@@ -18,13 +18,14 @@ def init():
     koko_ido = Angle(config.observation_location_latitude)  # 観測地の緯度
     koko_keido = Angle(config.observation_location_longitude)  # 観測地の経度
     koko = EarthLocation(lat=koko_ido, lon=koko_keido)
+
     # 観測時間、日本の20時に始まるが、๊UTCにする必要があるので9時間でひく
     toki = Time(config.observation_start_time) - 9*u.hour + np.arange(0,config.observation_time_hr,config.observation_interval_hr)*u.hour
     now = Time(config.observation_start_time) - 9*u.hour
 
     # 観測天体位置(赤道座標)
-    hoshi_sekkei = Angle('22h 57m 39.04625s')  # 赤経
-    hoshi_sekii = Angle('-29° 37′ 20.0533″')  # 赤緯
+    hoshi_sekkei = Angle(config.observation_target_ra)  # 赤経
+    hoshi_sekii = Angle(config.observation_target_dec)  # 赤緯
     hoshi_sekidou = SkyCoord(ra=hoshi_sekkei, dec=hoshi_sekii)
 
     # 地平座標のグリッド
@@ -59,8 +60,9 @@ def init():
     ax.plot(*np.stack([(0,0,0),hoshi_xyz],1)*0.2,color='#99bbff',lw=10)  # 望遠鏡描画
     ax.plot([0, 0], [0, 0], [0, 1], color='#ffffdd', alpha=0.6)  # 望遠鏡から天頂までの線
 
+    # 描画
     plt.axis('off')
     ax.view_init(30, 105)
     fig.canvas.draw()
-    plt.savefig('Astronomy.png')
+    plt.savefig('../log/Astronomy.png')
     plt.close()

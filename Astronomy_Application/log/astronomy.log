@@ -602,3 +602,87 @@
 2020-05-03 18:37:20,480,WARNING,legend.py,1384,_parse_legend_args,legend,matplotlib.legend,MainProcess,MainThread,No handles with labels found to put in legend.
 2020-05-03 18:37:27,237,WARNING,animation.py,1162,save,animation,matplotlib.animation,MainProcess,MainThread,MovieWriter ffmpeg unavailable.
 2020-05-03 18:37:27,245,INFO,animation.py,1172,save,animation,matplotlib.animation,MainProcess,MainThread,Animation.save using <class 'matplotlib.animation.PillowWriter'>
+2020-05-20 22:37:35,398,INFO,main.py,24,<module>,main,root,MainProcess,MainThread,Application Start
+2020-05-20 22:37:35,948,INFO,logger.py,24,logging_environment,logger,root,MainProcess,MainThread,Python Version:3.5.6
+2020-05-20 22:37:35,962,INFO,logger.py,25,logging_environment,logger,root,MainProcess,MainThread,Compiler:MSC v.1900 64 bit (AMD64)
+2020-05-20 22:37:35,965,INFO,logger.py,26,logging_environment,logger,root,MainProcess,MainThread,Build:('default', 'Aug 26 2018 16:05:27')
+2020-05-20 22:37:35,971,INFO,logger.py,29,logging_environment,logger,root,MainProcess,MainThread,OS:Windows-7-6.1.7601-SP1
+2020-05-20 22:37:35,980,INFO,logger.py,30,logging_environment,logger,root,MainProcess,MainThread,uname:uname_result(system='Windows', node='HASHIMOTO', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 42 Stepping 7, GenuineIntel')
+2020-05-20 22:37:35,984,INFO,logger.py,31,logging_environment,logger,root,MainProcess,MainThread,system:Windows
+2020-05-20 22:37:35,988,INFO,logger.py,32,logging_environment,logger,root,MainProcess,MainThread,node:HASHIMOTO
+2020-05-20 22:37:35,993,INFO,logger.py,33,logging_environment,logger,root,MainProcess,MainThread,release:7
+2020-05-20 22:37:35,997,INFO,logger.py,34,logging_environment,logger,root,MainProcess,MainThread,version:6.1.7601
+2020-05-20 22:37:36,001,INFO,logger.py,35,logging_environment,logger,root,MainProcess,MainThread,machine:AMD64
+2020-05-20 22:37:36,003,INFO,logger.py,36,logging_environment,logger,root,MainProcess,MainThread,architecture:('64bit', 'WindowsPE')
+2020-05-20 22:37:36,007,INFO,logger.py,37,logging_environment,logger,root,MainProcess,MainThread,/bin/ls:('64bit', '')
+2020-05-20 22:37:36,012,DEBUG,config.py,48,logging_paramter,config,root,MainProcess,MainThread,config_log:../parameter/logging.conf
+2020-05-20 22:37:36,013,DEBUG,config.py,49,logging_paramter,config,root,MainProcess,MainThread,syslog_facility:LOG_SYSLOG
+2020-05-20 22:37:36,015,DEBUG,config.py,50,logging_paramter,config,root,MainProcess,MainThread,syslog_option:LOG_PID
+2020-05-20 22:37:36,016,DEBUG,config.py,51,logging_paramter,config,root,MainProcess,MainThread,database:../database/astronomy.db
+2020-05-20 22:37:36,018,DEBUG,config.py,52,logging_paramter,config,root,MainProcess,MainThread,line_notify_api:https://notify-api.line.me/api/notify
+2020-05-20 22:37:36,019,DEBUG,config.py,53,logging_paramter,config,root,MainProcess,MainThread,line_notify_token:Ra7KPNYOMk5sbaCzZatIunBD2ha9LBFJd1O9dTe1nSa
+2020-05-20 22:37:36,021,DEBUG,config.py,54,logging_paramter,config,root,MainProcess,MainThread,observation_target:11
+2020-05-20 22:37:36,022,DEBUG,config.py,55,logging_paramter,config,root,MainProcess,MainThread,observation_start_time:2019-09-15 20:00:00
+2020-05-20 22:37:36,023,DEBUG,config.py,56,logging_paramter,config,root,MainProcess,MainThread,observation_time_hr:8.0
+2020-05-20 22:37:36,025,DEBUG,config.py,57,logging_paramter,config,root,MainProcess,MainThread,observation_interval_hr:1.0
+2020-05-20 22:37:36,027,DEBUG,config.py,58,logging_paramter,config,root,MainProcess,MainThread,observation_location_latitude:34Åã 34Åå 36.5Åç
+2020-05-20 22:37:36,061,DEBUG,config.py,59,logging_paramter,config,root,MainProcess,MainThread,observation_location_longitude:133Åã 35Åå 48.3Åç
+2020-05-20 22:37:36,063,DEBUG,config.py,60,logging_paramter,config,root,MainProcess,MainThread,observation_target_ra:22h 57m 39.04625s
+2020-05-20 22:37:36,065,DEBUG,config.py,61,logging_paramter,config,root,MainProcess,MainThread,observation_target_dec:-29Åã 37Åå 20.0533Åç
+2020-05-20 22:38:20,195,INFO,main.py,40,<module>,main,root,MainProcess,MainThread,Application End(44.572550[sec])
+2020-05-20 22:38:56,043,INFO,main.py,24,<module>,main,root,MainProcess,MainThread,Application Start
+2020-05-20 22:38:56,121,INFO,logger.py,24,logging_environment,logger,root,MainProcess,MainThread,Python Version:3.5.6
+2020-05-20 22:38:56,126,INFO,logger.py,25,logging_environment,logger,root,MainProcess,MainThread,Compiler:MSC v.1900 64 bit (AMD64)
+2020-05-20 22:38:56,130,INFO,logger.py,26,logging_environment,logger,root,MainProcess,MainThread,Build:('default', 'Aug 26 2018 16:05:27')
+2020-05-20 22:38:56,134,INFO,logger.py,29,logging_environment,logger,root,MainProcess,MainThread,OS:Windows-7-6.1.7601-SP1
+2020-05-20 22:38:56,137,INFO,logger.py,30,logging_environment,logger,root,MainProcess,MainThread,uname:uname_result(system='Windows', node='HASHIMOTO', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 42 Stepping 7, GenuineIntel')
+2020-05-20 22:38:56,140,INFO,logger.py,31,logging_environment,logger,root,MainProcess,MainThread,system:Windows
+2020-05-20 22:38:56,142,INFO,logger.py,32,logging_environment,logger,root,MainProcess,MainThread,node:HASHIMOTO
+2020-05-20 22:38:56,146,INFO,logger.py,33,logging_environment,logger,root,MainProcess,MainThread,release:7
+2020-05-20 22:38:56,148,INFO,logger.py,34,logging_environment,logger,root,MainProcess,MainThread,version:6.1.7601
+2020-05-20 22:38:56,151,INFO,logger.py,35,logging_environment,logger,root,MainProcess,MainThread,machine:AMD64
+2020-05-20 22:38:56,153,INFO,logger.py,36,logging_environment,logger,root,MainProcess,MainThread,architecture:('64bit', 'WindowsPE')
+2020-05-20 22:38:56,155,INFO,logger.py,37,logging_environment,logger,root,MainProcess,MainThread,/bin/ls:('64bit', '')
+2020-05-20 22:38:56,157,DEBUG,config.py,48,logging_paramter,config,root,MainProcess,MainThread,config_log:../parameter/logging.conf
+2020-05-20 22:38:56,159,DEBUG,config.py,49,logging_paramter,config,root,MainProcess,MainThread,syslog_facility:LOG_SYSLOG
+2020-05-20 22:38:56,160,DEBUG,config.py,50,logging_paramter,config,root,MainProcess,MainThread,syslog_option:LOG_PID
+2020-05-20 22:38:56,162,DEBUG,config.py,51,logging_paramter,config,root,MainProcess,MainThread,database:../database/astronomy.db
+2020-05-20 22:38:56,164,DEBUG,config.py,52,logging_paramter,config,root,MainProcess,MainThread,line_notify_api:https://notify-api.line.me/api/notify
+2020-05-20 22:38:56,166,DEBUG,config.py,53,logging_paramter,config,root,MainProcess,MainThread,line_notify_token:Ra7KPNYOMk5sbaCzZatIunBD2ha9LBFJd1O9dTe1nSa
+2020-05-20 22:38:56,167,DEBUG,config.py,54,logging_paramter,config,root,MainProcess,MainThread,observation_target:11
+2020-05-20 22:38:56,168,DEBUG,config.py,55,logging_paramter,config,root,MainProcess,MainThread,observation_start_time:2019-09-15 20:00:00
+2020-05-20 22:38:56,169,DEBUG,config.py,56,logging_paramter,config,root,MainProcess,MainThread,observation_time_hr:8.0
+2020-05-20 22:38:56,170,DEBUG,config.py,57,logging_paramter,config,root,MainProcess,MainThread,observation_interval_hr:1.0
+2020-05-20 22:38:56,171,DEBUG,config.py,58,logging_paramter,config,root,MainProcess,MainThread,observation_location_latitude:34Åã 34Åå 36.5Åç
+2020-05-20 22:38:56,173,DEBUG,config.py,59,logging_paramter,config,root,MainProcess,MainThread,observation_location_longitude:133Åã 35Åå 48.3Åç
+2020-05-20 22:38:56,175,DEBUG,config.py,60,logging_paramter,config,root,MainProcess,MainThread,observation_target_ra:22h 57m 39.04625s
+2020-05-20 22:38:56,177,DEBUG,config.py,61,logging_paramter,config,root,MainProcess,MainThread,observation_target_dec:-29Åã 37Åå 20.0533Åç
+2020-05-20 22:39:36,727,INFO,main.py,40,<module>,main,root,MainProcess,MainThread,Application End(40.582321[sec])
+2020-05-20 22:51:31,303,INFO,main.py,24,<module>,main,root,MainProcess,MainThread,Application Start
+2020-05-20 22:51:31,380,INFO,logger.py,24,logging_environment,logger,root,MainProcess,MainThread,Python Version:3.5.6
+2020-05-20 22:51:31,384,INFO,logger.py,25,logging_environment,logger,root,MainProcess,MainThread,Compiler:MSC v.1900 64 bit (AMD64)
+2020-05-20 22:51:31,389,INFO,logger.py,26,logging_environment,logger,root,MainProcess,MainThread,Build:('default', 'Aug 26 2018 16:05:27')
+2020-05-20 22:51:31,393,INFO,logger.py,29,logging_environment,logger,root,MainProcess,MainThread,OS:Windows-7-6.1.7601-SP1
+2020-05-20 22:51:31,397,INFO,logger.py,30,logging_environment,logger,root,MainProcess,MainThread,uname:uname_result(system='Windows', node='HASHIMOTO', release='7', version='6.1.7601', machine='AMD64', processor='Intel64 Family 6 Model 42 Stepping 7, GenuineIntel')
+2020-05-20 22:51:31,401,INFO,logger.py,31,logging_environment,logger,root,MainProcess,MainThread,system:Windows
+2020-05-20 22:51:31,404,INFO,logger.py,32,logging_environment,logger,root,MainProcess,MainThread,node:HASHIMOTO
+2020-05-20 22:51:31,407,INFO,logger.py,33,logging_environment,logger,root,MainProcess,MainThread,release:7
+2020-05-20 22:51:31,410,INFO,logger.py,34,logging_environment,logger,root,MainProcess,MainThread,version:6.1.7601
+2020-05-20 22:51:31,413,INFO,logger.py,35,logging_environment,logger,root,MainProcess,MainThread,machine:AMD64
+2020-05-20 22:51:31,416,INFO,logger.py,36,logging_environment,logger,root,MainProcess,MainThread,architecture:('64bit', 'WindowsPE')
+2020-05-20 22:51:31,419,INFO,logger.py,37,logging_environment,logger,root,MainProcess,MainThread,/bin/ls:('64bit', '')
+2020-05-20 22:51:31,422,DEBUG,config.py,48,logging_paramter,config,root,MainProcess,MainThread,config_log:../parameter/logging.conf
+2020-05-20 22:51:31,424,DEBUG,config.py,49,logging_paramter,config,root,MainProcess,MainThread,syslog_facility:LOG_SYSLOG
+2020-05-20 22:51:31,425,DEBUG,config.py,50,logging_paramter,config,root,MainProcess,MainThread,syslog_option:LOG_PID
+2020-05-20 22:51:31,427,DEBUG,config.py,51,logging_paramter,config,root,MainProcess,MainThread,database:../database/astronomy.db
+2020-05-20 22:51:31,428,DEBUG,config.py,52,logging_paramter,config,root,MainProcess,MainThread,line_notify_api:https://notify-api.line.me/api/notify
+2020-05-20 22:51:31,430,DEBUG,config.py,53,logging_paramter,config,root,MainProcess,MainThread,line_notify_token:Ra7KPNYOMk5sbaCzZatIunBD2ha9LBFJd1O9dTe1nSa
+2020-05-20 22:51:31,432,DEBUG,config.py,54,logging_paramter,config,root,MainProcess,MainThread,observation_target:11
+2020-05-20 22:51:31,433,DEBUG,config.py,55,logging_paramter,config,root,MainProcess,MainThread,observation_start_time:2019-09-15 20:00:00
+2020-05-20 22:51:31,435,DEBUG,config.py,56,logging_paramter,config,root,MainProcess,MainThread,observation_time_hr:8.0
+2020-05-20 22:51:31,437,DEBUG,config.py,57,logging_paramter,config,root,MainProcess,MainThread,observation_interval_hr:1.0
+2020-05-20 22:51:31,440,DEBUG,config.py,58,logging_paramter,config,root,MainProcess,MainThread,observation_location_latitude:34Åã 34Åå 36.5Åç
+2020-05-20 22:51:31,441,DEBUG,config.py,59,logging_paramter,config,root,MainProcess,MainThread,observation_location_longitude:133Åã 35Åå 48.3Åç
+2020-05-20 22:51:31,444,DEBUG,config.py,60,logging_paramter,config,root,MainProcess,MainThread,observation_target_ra:22h 57m 39.04625s
+2020-05-20 22:51:31,445,DEBUG,config.py,61,logging_paramter,config,root,MainProcess,MainThread,observation_target_dec:-29Åã 37Åå 20.0533Åç
+2020-05-20 22:52:14,330,INFO,main.py,40,<module>,main,root,MainProcess,MainThread,Application End(42.590436[sec])

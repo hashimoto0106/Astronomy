@@ -35,6 +35,8 @@ observation_time_hr = inifile.getfloat('observation', 'time_hr')
 observation_interval_hr = inifile.getfloat('observation', 'interval_hr')
 observation_location_latitude = inifile.get('observation', 'location_latitude')
 observation_location_longitude = inifile.get('observation', 'location_longitude')
+observation_target_ra = inifile.get('observation', 'target_ra')
+observation_target_dec = inifile.get('observation', 'target_dec')
 
 
 def init():
@@ -55,3 +57,5 @@ def logging_paramter():
     logger.app_logger.debug("observation_interval_hr:%s", observation_interval_hr)
     logger.app_logger.debug("observation_location_latitude:%s", observation_location_latitude)
     logger.app_logger.debug("observation_location_longitude:%s", observation_location_longitude)
+    logger.app_logger.debug("observation_target_ra:%s", observation_target_ra)
+    logger.app_logger.debug("observation_target_dec:%s", observation_target_dec)
